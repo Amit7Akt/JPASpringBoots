@@ -1,0 +1,7 @@
+spring.datasource.name = TEST
+spring.datasource.url = jdbc:oracle:thin:@localhost:1521:ORCL
+spring.datasource.username=SYSTEM
+spring.datasource.password= = SYSTEM
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.Oracle19cDialect
+

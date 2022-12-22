@@ -1,0 +1,5 @@
+package com.JPAProject.Project.entity;
+
+public class User {
+
+}

@@ -1,0 +1,5 @@
+package com.JPAProject.Project.repository;
+
+public interface UserRepository {
+
+}
