@@ -1,0 +1,40 @@
+package com.restapi.Controller;
+
+import java.util.List;
+import java.util.Scanner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import com.restapi.Services.*;
+import com.restapi.entities.Book;
+
+@RestController
+
+public class controller {
+	
+	@Autowired 
+	private BookService bookservice;
+	
+	@GetMapping("/books")
+//	@ResponseBody
+	
+	public List<Book>  books() {
+		
+		List<Book> list = services.getAllBooks();
+		
+		return list;
+		
+	}
+	
+	@SuppressWarnings("resource")
+	@GetMapping("/book/{id}")
+	public Book getOneBook() {
+			
+			
+			Book book = services.getbookByID(id);
+			return book;
+	
+	
+	}
+}

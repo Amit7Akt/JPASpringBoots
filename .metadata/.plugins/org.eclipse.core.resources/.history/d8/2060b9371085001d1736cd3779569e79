@@ -1,0 +1,7 @@
+package com.restapi.entities;
+
+public class Book {
+	private int book_num;
+	private String title;
+	private String author;
+}

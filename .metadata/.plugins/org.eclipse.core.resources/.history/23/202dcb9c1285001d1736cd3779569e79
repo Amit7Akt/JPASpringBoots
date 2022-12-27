@@ -1,0 +1,15 @@
+package com.restapi.Services;
+
+import com.restapi.entities.Book;
+import java.util.ArrayList;
+import java.util.List;
+
+public class BookService {
+	private static List<Book> list = new ArrayList<>();
+	
+	static {
+		list.add(new Book(12, "The complete Java referece", "xyz"));
+		list.add(new Book(34, "Effective Java", "Amit"));
+		list.add(new Book(34, "More Effective C++", "Scott Meyers"));
+	}
+}

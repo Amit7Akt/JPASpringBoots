@@ -1,9 +1,0 @@
-package com.JPAProject.Project.dao;
-
-import org.springframework.data.repository.CrudRepository;
-
-import com.JPAProject.Project.entity.User;
-
-public interface userRepository extends CrudRepository<User,Integer >{
-
-}

@@ -1,0 +1,9 @@
+package com.restapi.Services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BookService {
+	private static List<Book> list = new ArrayList<>();
+	
+}

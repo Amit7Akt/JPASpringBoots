@@ -1,0 +1,36 @@
+package com.restapi.Controller;
+
+import java.util.List;
+import java.util.Scanner;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import com.restapi.Services.*;
+import com.restapi.entities.Book;
+
+@RestController
+
+public class controller {
+	
+	
+	@GetMapping("/books")
+//	@ResponseBody
+	
+	public List<Book>  books() {
+		BookService services = new BookService();
+		List<Book> list = services.getAllBooks();
+		
+		return list;
+		
+	}
+	
+	@GetMapping("/getOneBook")
+	public Book getOneBook() {
+		BookService services = new BookService();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Book ID");
+		int id = sc.nextInt();
+		Book book = services.getbookByID(id);
+		return book;
+	}
+}

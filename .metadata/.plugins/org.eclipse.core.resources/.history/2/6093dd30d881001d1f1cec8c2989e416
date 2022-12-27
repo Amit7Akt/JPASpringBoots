@@ -1,5 +1,0 @@
-package com.JPAProject.Project.dao;
-
-public interface userRepository {
-
-}

@@ -1,0 +1,42 @@
+package com.restapi.Services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.restapi.entities.Book;
+
+public class BookService {
+	private static List<Book> list = new ArrayList<>();
+	
+	static {
+		list.add(new Book(12, "The complete Java referece", "xyz"));
+		list.add(new Book(35, "Effective Java", "Amit"));
+		list.add(new Book(34, "More Effective C++", "Scott Meyers"));
+	}
+	public List<Book> getAllBooks(){
+		return list;
+		
+	}
+	public Book getbookByID(int id) {
+		int i=0;
+		while(i<=list.size()) {
+			if(list.get(i).getBook_num()==id) {
+				return list.get(i);
+			}
+			i++;
+		}
+		
+		return null;
+		
+	}
+	//adding the book
+	
+	public void addEntry(Book book) {
+		list.add(book);
+		
+	}
+	
+	public void deleteEntry(Book book) {
+		list.remove(book);
+	}
+}
